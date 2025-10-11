@@ -1,0 +1,153 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background-image: url('images/headphones_hero_1.jpg'); /* Path to your image */
+  background-repeat: no-repeat;                  /* Prevent tiling */
+  background-position: center center;            /* Center the image */
+  background-size: cover;                        /* Fill the screen */
+  background-attachment: fixed;                  /* Optional: keeps image fixed on scroll */
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 0;
+}
+
+/* Header layout */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;     /* Controls spacing on both sides */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 20px; /* spacing between logo and nav */
+}
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff4d4d;
+}
+
+/* Hero section */
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 40px;
+  
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
